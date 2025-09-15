@@ -16,6 +16,14 @@ public class TareaSemana13
             System.Console.WriteLine("3. Salir");
             System.Console.Write("Seleccione una opcion: ");
             opcion = System.Console.ReadLine();
+        if (opcion == "1")
+        {
+            catalogo.Mostrar(); // Llama al metodo que imprime las revistas
+        }
+        else if (opcion == "2")
+        {
+            System.Console.Write("Ingrese el título a buscar: ");
+            entrada = System.Console.ReadLine();
         }
             
 
