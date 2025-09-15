@@ -15,6 +15,37 @@ public class Catalogo
     revistas[8] = new Revista("Discover Magazine");
     revistas[9] = new Revista("Revista estadio");
     }
+    public void Mostrar()
+    {
+        int i = 0;
+        while (i < 10)
+        {
+            Escribir("[" + (i + 1) + "] " + revistas[i].titulo);
+            i = i + 1;
+        }
+    }
+    // Metodo para buscar una revista de forma recursivas
+    public bool BuscarRecursivo(string buscado, int indice)
+    {
+        if (indice >= 10)
+        {
+            return false;
+        }
 
+        if (revistas[indice].titulo.ToLower() == buscado.ToLower())
+        {
+            return true;
+        }
+
+        return BuscarRecursivo(buscado, indice + 1);
+    }
+    //  Metodo para escribir en la consola 
+    public void Escribir(string texto)
+    {
+        System.Console.WriteLine(texto);
+    }
 }
+
+
+
     
